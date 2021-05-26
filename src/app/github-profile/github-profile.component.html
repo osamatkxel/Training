@@ -1,0 +1,35 @@
+<p>github-profile works!</p>
+<div class="mb-3">
+    <label for="language" class="form-label">Language Name</label>
+    <input type="text" class="form-control" id="name"  name = "name" [(ngModel)] = "name"  placeholder="Language Name">
+    <input type="text" class="form-control" id="loved"  name = "true" [(ngModel)] = "love"  placeholder="Loved?">
+    <button class="btn btn-primary" (click) = "addLanguage()" >Add</button>
+</div>
+<div class="container">
+    <form action="" #form="ngForm" (ngSubmit)="submit(form)">
+        <div class="mb-3">
+            <label for="language" class="form-label">Search Language</label>
+            <input type="text" class="form-control" id="language"  name = "findLanguage" ngModel #search = "ngModel" placeholder="Search a language">
+            <button class="btn btn-primary"  >Search</button>
+        </div>
+    </form>
+</div>
+<table class="table table-dark table-striped">
+    <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">ID</th>
+          <th scope="col">Name</th>
+          <th scope="col">Loved</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- <div > -->
+        <tr *ngFor="let course of allData">
+        <th scope="row">{{ course.id }}</th>
+        <td>{{ course.id }}</td>
+        <td>{{ course.name }}</td>
+        <td>{{ course.loved }}</td>
+        </tr>
+      </tbody>
+  </table>

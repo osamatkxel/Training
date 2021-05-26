@@ -1,0 +1,15 @@
+<nav class="navbar navbar-dark bg-dark">
+    <form class="form-inline">
+      <button class="btn btn-sm btn-light mr-4" type="button"><a routerLinkActive = "active current" routerLink="">Home</a></button>
+
+      <button class="btn btn-sm btn-light mr-4" type="button">
+        <a routerLinkActive = "active current" 
+          routerLink="followers"
+          [queryParams] = "{page: '1', order: 'newest'}">
+          Followers</a>
+      </button>
+      <button class="btn btn-sm btn-light mr-4" type="button"><a routerLinkActive = "active current" routerLink="posts">Posts</a></button>
+      <button class="btn btn-sm btn-light " type="button"><a routerLinkActive = "active current" routerLink="comments">Comments</a></button>
+
+    </form>
+  </nav>

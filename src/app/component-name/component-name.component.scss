@@ -1,0 +1,78 @@
+#one {
+    //opacity: 0;
+    animation: hideshow 1s ease-out;
+}
+#two {
+    //opacity: 0;
+    animation: hideshow 2s ease-out;
+}
+#three {
+    //opacity: 0;
+    animation: hideshow 3s ease-out;
+}
+#four {
+    animation: hideshow 4s ease-out;
+}
+#five {
+    animation: hideshow 5s ease-out;
+}
+
+
+@keyframes hideshow {
+    0% { opacity: 0; }
+  10% { opacity: 0; }
+  15% { opacity: 0; }
+  100% { opacity:0; }
+ 
+}
+
+@keyframes toggle {
+    from { opacity: 1;}
+    to { opacity: 0;}
+}
+
+
+.pad {
+    margin-bottom: 2vh;
+}
+
+.right-margin {
+    //margin-right: 1.5vw; commented this line, it is working
+    margin-right: 1.5vw;
+    margin-top: 2vh
+}
+
+.values {
+    color: #C5C9D1;
+    text-align: right;
+}
+.svg {
+    top: -240px;
+}
+
+/*@media screen and (max-width: 750px) {
+    .svg {
+        top: -265px;
+    }
+}
+@media screen and (max-width: 650px) {
+    .svg {
+        top: -230px;
+    }
+}
+@media screen and (max-width: 550px) {
+    .svg {
+        top: -220px;
+    }
+}
+//Now same for height
+@media screen and (max-height: 550px) {
+    .svg {
+        top: -220px;
+    }
+}
+@media screen and (max-height: 450px) {
+    .svg {
+        top: -170px;
+    }
+}*/

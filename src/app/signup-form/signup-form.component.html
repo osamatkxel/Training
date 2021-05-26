@@ -1,0 +1,46 @@
+<p>Signup component works</p>
+<div class="container">
+    <form [formGroup] = "form" (ngSubmit) = "login()">
+        <div *ngIf="form.errors"class="alert alert-danger">Credentials do not match..</div>
+        <div class="form-group">
+            <label for="username">Username</label>
+            <input 
+                formControlName = "username"
+                type="text" 
+                required
+                (change) = "changed(username)"
+                class = "form-control" 
+                id = "username" 
+                name = "username">
+                <div *ngIf = "username.pending">Checking for uniqueness ............................</div>
+            
+            <div *ngIf=" 
+                username.invalid &&
+                (username.dirty || username.touched) &&
+                username.errors" 
+                class="alert alert-danger">
+                <div *ngIf="username.errors.required">First Name is required</div>
+                <div *ngIf="username.errors.maxlength">Cannot be more than 10 characters</div>
+                <div *ngIf="username.errors.minlength">Cannot be less than 3 characters</div>
+                <div *ngIf="username.errors.cannotContainSpace">Spaces are not allowed in username</div>
+                <div *ngIf="username.errors.shouldBeUnique">This username is already taken</div>
+                <div *ngIf="username.errors.asyncUnique">This username is already taken (Async)</div>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="password">Password</label>
+            <input 
+                formControlName = "password"
+                type="text" 
+                class = "form-control" 
+                id="password" 
+                name = "password">
+                <div *ngIf="
+                form.controls['password'].invalid &&
+                (form.controls['password'].dirty || form.controls['password'].touched) &&
+                form.controls['password'].errors
+              " class="alert alert-danger">Password is required</div>
+        </div>
+        <button class="btn btn-primary my-2">Signup</button>
+    </form>
+</div>

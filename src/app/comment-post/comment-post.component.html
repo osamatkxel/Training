@@ -1,24 +1,38 @@
 <p>comment-post works!</p>
-<div>
-    <h1>Every Post and comment will pop up here</h1>
-    <br>
+<div class="container">
+    <div>
+        <h1>Every Post and comment will pop up here</h1>
+        <br>
 
-    <div class="form-body">
-        <h3>Enter Post..</h3>
-        <form autocomplete="off" [formGroup]="createForm" (ngSubmit)="onCreate(createForm.value)">
-        <div class="form-group">
-            <label>ID</label>
-            <input class="form-control" type="text" formControlName="id" autocomplete="off">
-            </div>
-        <div class="form-group">
-            <label>Name: </label>
-            <input class="form-control" type="text" formControlName="title" autocomplete="off">
+        <div class="form-body">
+            <h3>Enter Post..</h3>
+            <form autocomplete="off" [formGroup]="createForm" (ngSubmit)="onCreate(createForm.value)">
+                <div class="form-group">
+                    <label>ID</label>
+                    <input class="form-control" type="text" formControlName="id" autocomplete="off">
+                </div>
+                <div class="form-group">
+                    <label>Name: </label>
+                    <input class="form-control" type="text" formControlName="title" autocomplete="off">
+                </div>
+                <button class="btn btn-outline-success mb-2" type="submit">Submit</button>
+            </form>
         </div>
-        <button class="btn btn-outline-success mb-2" type="submit">Submit</button>
-        </form>
-    </div>
-    <div *ngFor="let post of posts">
-        <h3>{{post.title}}</h3>
+        <div *ngFor="let post of posts; let i=index;">
+            <div class="card">
+                <div class="card-body">
+                    <button style="float: right;" class="btn btn-outline-danger" (click)="delPost(post)">Delete</button>
+                    <p class="card-title">Post ID: {{post.id}}</p>
+                    <h6 class="card-text">Content: {{post.title}}</h6>
+                    <form (ngSubmit)="onCreateComment($event, post)">
+                        <input class="form-control" type="text" name="cmt">
+                        <button style="float: right;" class="my-1 btn btn-outline-warning">Comment</button>
+                    </form>
+                    <div *ngFor="let c of post.comments as unknown; let j=index">
+                        <p> {{j+1}}- {{c.content}}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
-

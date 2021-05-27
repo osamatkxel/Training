@@ -22,50 +22,55 @@ import { ComponentNameComponent } from './component-name/component-name.componen
 import { AmplifyUIAngularModule } from '@aws-amplify/ui-angular';
 import { CommentPostComponent } from './comment-post/comment-post.component';
 
-
-
 @NgModule({
   declarations: [
     AppComponent,
     CoursesComponent,
-    CourseComponent, 
+    CourseComponent,
     CommentPostComponent,
-    SummaryPipe, FavoriteComponent, InputFormatterDirective, SignupFormComponent, HttpPracticeComponent, NavbarComponent, HomeComponent, GithubProfileComponent, GithubFollowersComponent, ComponentNameComponent,
+    SummaryPipe,
+    FavoriteComponent,
+    InputFormatterDirective,
+    SignupFormComponent,
+    HttpPracticeComponent,
+    NavbarComponent,
+    HomeComponent,
+    GithubProfileComponent,
+    GithubFollowersComponent,
+    ComponentNameComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
-    HttpClientModule, 
+    HttpClientModule,
     AmplifyUIAngularModule,
     RouterModule.forRoot([
-      { 
-        path: '', 
-        component: HomeComponent
+      {
+        path: '',
+        component: HomeComponent,
       },
-      { 
-        path: 'followers', 
-        component: GithubFollowersComponent
+      {
+        path: 'followers',
+        component: GithubFollowersComponent,
       },
-      { 
-        path: 'profile/:username', 
-        component: GithubProfileComponent
+      {
+        path: 'profile/:username',
+        component: GithubProfileComponent,
       },
-      { 
-        path: 'posts', 
-        component: HttpPracticeComponent
+      {
+        path: 'posts',
+        component: HttpPracticeComponent,
       },
       {
         path: 'comments',
-        component: CommentPostComponent
-      }
-    ]), GraphQLModule
+        component: CommentPostComponent,
+      },
+    ]),
+    GraphQLModule,
   ],
-  providers: [
-    CourseService,
-    HttpClient
-  ],
-  bootstrap: [AppComponent]
+  providers: [CourseService, HttpClient],
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

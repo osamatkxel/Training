@@ -15,12 +15,19 @@ export class CommentPostComponent implements OnInit {
   public createForm: FormGroup;
   posts: Array<Post>;
   comments: Array<Comment>;
+  cmtPost: Post;
 
   text: string = '';
   @ViewChild('cmt', { static: false }) input?: ElementRef;
   constructor(private api: APIService, private fb: FormBuilder) {
     this.posts = [];
     this.comments = [];
+    this.cmtPost = {
+      id: '100',
+      title: 'testing',
+      numberOfComments: 0,
+      comments: [],
+    };
     this.createForm = this.fb.group({
       id: [''],
       title: ['', Validators.required],
@@ -42,13 +49,19 @@ export class CommentPostComponent implements OnInit {
 
     //Fetching all comments
     for (let p of this.posts) {
-      this.api.GetPost(p.id as string).then((event: any) => {
+      await this.api.GetPost(p.id as string).then((event: any) => {
         let i = this.posts.indexOf(p);
         (this.posts[i].comments as unknown as Comment[]) =
           event.comments?.items;
-        this.comments = event.comments?.items;
+        //console.log(this.posts[i].comments);
+        // this.comments = event.comments?.items;
       });
     }
+    this.cmtPost.comments = [
+      ...this.posts[0].comments,
+      ...this.posts[1].comments,
+    ];
+    console.log(this.cmtPost.comments);
 
     //Subscribing to the CreatePost Listner
     this.api.OnCreatePostListener.subscribe((event: any) => {
@@ -89,8 +102,9 @@ export class CommentPostComponent implements OnInit {
     console.log(event.target.cmt.value);
     //Getting value
     //Making Comment
+
     let cmt: Comment = {
-      id: '21',
+      id: '28',
       postID: p.id,
       content: event.target.cmt.value,
     };

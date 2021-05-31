@@ -1,26 +1,32 @@
 {
-    "dev": {
-        "awscloudformation": {
-            "AuthRoleName": "amplify-helloworld-dev-152430-authRole",
-            "UnauthRoleArn": "arn:aws:iam::790101844276:role/amplify-helloworld-dev-152430-unauthRole",
-            "AuthRoleArn": "arn:aws:iam::790101844276:role/amplify-helloworld-dev-152430-authRole",
-            "Region": "us-east-1",
-            "DeploymentBucketName": "amplify-helloworld-dev-152430-deployment",
-            "UnauthRoleName": "amplify-helloworld-dev-152430-unauthRole",
-            "StackName": "amplify-helloworld-dev-152430",
-            "StackId": "arn:aws:cloudformation:us-east-1:790101844276:stack/amplify-helloworld-dev-152430/bed1fc70-ba1e-11eb-8552-0ebd71830845",
-            "AmplifyAppId": "d2ykef792047xd"
-        },
-        "categories": {
-            "auth": {
-                "helloworlde7cec539": {}
-            },
-            "hosting": {
-                "amplifyhosting": {
-                    "appId": "d2ykef792047xd",
-                    "type": "manual"
-                }
-            }
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-helloworld-dev-152430-authRole",
+      "UnauthRoleArn": "arn:aws:iam::790101844276:role/amplify-helloworld-dev-152430-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::790101844276:role/amplify-helloworld-dev-152430-authRole",
+      "Region": "us-east-1",
+      "DeploymentBucketName": "amplify-helloworld-dev-152430-deployment",
+      "UnauthRoleName": "amplify-helloworld-dev-152430-unauthRole",
+      "StackName": "amplify-helloworld-dev-152430",
+      "StackId": "arn:aws:cloudformation:us-east-1:790101844276:stack/amplify-helloworld-dev-152430/bed1fc70-ba1e-11eb-8552-0ebd71830845",
+      "AmplifyAppId": "d2ykef792047xd"
+    },
+    "categories": {
+      "auth": {
+        "helloworlde7cec539": {}
+      },
+      "hosting": {
+        "amplifyhosting": {
+          "appId": "d2ykef792047xd",
+          "type": "manual"
         }
+      },
+      "function": {
+        "UpdateCommentTrigger": {
+          "deploymentBucketName": "amplify-helloworld-dev-152430-deployment",
+          "s3Key": "amplify-builds/UpdateCommentTrigger-4b474e6d6b6f482f6149-build.zip"
+        }
+      }
     }
+  }
 }

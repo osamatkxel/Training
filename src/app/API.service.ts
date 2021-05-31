@@ -1,9 +1,9 @@
 /* tslint:disable */
 /* eslint-disable */
 //  This file was automatically generated and should not be edited.
-import { Injectable } from "@angular/core";
-import API, { graphqlOperation, GraphQLResult } from "@aws-amplify/api-graphql";
-import { Observable } from "zen-observable-ts";
+import { Injectable } from '@angular/core';
+import API, { graphqlOperation, GraphQLResult } from '@aws-amplify/api-graphql';
+import { Observable } from 'zen-observable-ts';
 
 export interface SubscriptionResponse<T> {
   value: GraphQLResult<T>;
@@ -40,16 +40,16 @@ export type ModelStringInput = {
 };
 
 export enum ModelAttributeTypes {
-  binary = "binary",
-  binarySet = "binarySet",
-  bool = "bool",
-  list = "list",
-  map = "map",
-  number = "number",
-  numberSet = "numberSet",
-  string = "string",
-  stringSet = "stringSet",
-  _null = "_null"
+  binary = 'binary',
+  binarySet = 'binarySet',
+  bool = 'bool',
+  list = 'list',
+  map = 'map',
+  number = 'number',
+  numberSet = 'numberSet',
+  string = 'string',
+  stringSet = 'stringSet',
+  _null = '_null',
 }
 
 export type ModelSizeInput = {
@@ -63,7 +63,7 @@ export type ModelSizeInput = {
 };
 
 export type Todo = {
-  __typename: "Todo";
+  __typename: 'Todo';
   id?: string;
   name?: string;
   description?: string | null;
@@ -108,7 +108,7 @@ export type ModelIntInput = {
 };
 
 export type Post = {
-  __typename: "Post";
+  __typename: 'Post';
   id?: string;
   title?: string;
   numberOfComments?: number | null;
@@ -118,13 +118,13 @@ export type Post = {
 };
 
 export type ModelCommentConnection = {
-  __typename: "ModelCommentConnection";
+  __typename: 'ModelCommentConnection';
   items?: Array<Comment | null> | null;
   nextToken?: string | null;
 };
 
 export type Comment = {
-  __typename: "Comment";
+  __typename: 'Comment';
   id?: string;
   postID?: string;
   content?: string;
@@ -192,7 +192,7 @@ export type ModelTodoFilterInput = {
 };
 
 export type ModelTodoConnection = {
-  __typename: "ModelTodoConnection";
+  __typename: 'ModelTodoConnection';
   items?: Array<Todo | null> | null;
   nextToken?: string | null;
 };
@@ -207,7 +207,7 @@ export type ModelPostFilterInput = {
 };
 
 export type ModelPostConnection = {
-  __typename: "ModelPostConnection";
+  __typename: 'ModelPostConnection';
   items?: Array<Post | null> | null;
   nextToken?: string | null;
 };
@@ -222,7 +222,7 @@ export type ModelCommentFilterInput = {
 };
 
 export type CreateTodoMutation = {
-  __typename: "Todo";
+  __typename: 'Todo';
   id: string;
   name: string;
   description?: string | null;
@@ -231,7 +231,7 @@ export type CreateTodoMutation = {
 };
 
 export type UpdateTodoMutation = {
-  __typename: "Todo";
+  __typename: 'Todo';
   id: string;
   name: string;
   description?: string | null;
@@ -240,7 +240,7 @@ export type UpdateTodoMutation = {
 };
 
 export type DeleteTodoMutation = {
-  __typename: "Todo";
+  __typename: 'Todo';
   id: string;
   name: string;
   description?: string | null;
@@ -249,14 +249,14 @@ export type DeleteTodoMutation = {
 };
 
 export type CreatePostMutation = {
-  __typename: "Post";
+  __typename: 'Post';
   id: string;
   title: string;
   numberOfComments?: number | null;
   comments?: {
-    __typename: "ModelCommentConnection";
+    __typename: 'ModelCommentConnection';
     items?: Array<{
-      __typename: "Comment";
+      __typename: 'Comment';
       id: string;
       postID: string;
       content: string;
@@ -270,14 +270,14 @@ export type CreatePostMutation = {
 };
 
 export type UpdatePostMutation = {
-  __typename: "Post";
+  __typename: 'Post';
   id: string;
   title: string;
   numberOfComments?: number | null;
   comments?: {
-    __typename: "ModelCommentConnection";
+    __typename: 'ModelCommentConnection';
     items?: Array<{
-      __typename: "Comment";
+      __typename: 'Comment';
       id: string;
       postID: string;
       content: string;
@@ -291,14 +291,14 @@ export type UpdatePostMutation = {
 };
 
 export type DeletePostMutation = {
-  __typename: "Post";
+  __typename: 'Post';
   id: string;
   title: string;
   numberOfComments?: number | null;
   comments?: {
-    __typename: "ModelCommentConnection";
+    __typename: 'ModelCommentConnection';
     items?: Array<{
-      __typename: "Comment";
+      __typename: 'Comment';
       id: string;
       postID: string;
       content: string;
@@ -312,7 +312,7 @@ export type DeletePostMutation = {
 };
 
 export type CreateCommentMutation = {
-  __typename: "Comment";
+  __typename: 'Comment';
   id: string;
   postID: string;
   content: string;
@@ -321,7 +321,7 @@ export type CreateCommentMutation = {
 };
 
 export type UpdateCommentMutation = {
-  __typename: "Comment";
+  __typename: 'Comment';
   id: string;
   postID: string;
   content: string;
@@ -330,7 +330,7 @@ export type UpdateCommentMutation = {
 };
 
 export type DeleteCommentMutation = {
-  __typename: "Comment";
+  __typename: 'Comment';
   id: string;
   postID: string;
   content: string;
@@ -339,7 +339,7 @@ export type DeleteCommentMutation = {
 };
 
 export type GetTodoQuery = {
-  __typename: "Todo";
+  __typename: 'Todo';
   id: string;
   name: string;
   description?: string | null;
@@ -348,9 +348,9 @@ export type GetTodoQuery = {
 };
 
 export type ListTodosQuery = {
-  __typename: "ModelTodoConnection";
+  __typename: 'ModelTodoConnection';
   items?: Array<{
-    __typename: "Todo";
+    __typename: 'Todo';
     id: string;
     name: string;
     description?: string | null;
@@ -361,14 +361,14 @@ export type ListTodosQuery = {
 };
 
 export type GetPostQuery = {
-  __typename: "Post";
+  __typename: 'Post';
   id: string;
   title: string;
   numberOfComments?: number | null;
   comments?: {
-    __typename: "ModelCommentConnection";
+    __typename: 'ModelCommentConnection';
     items?: Array<{
-      __typename: "Comment";
+      __typename: 'Comment';
       id: string;
       postID: string;
       content: string;
@@ -382,14 +382,14 @@ export type GetPostQuery = {
 };
 
 export type ListPostsQuery = {
-  __typename: "ModelPostConnection";
+  __typename: 'ModelPostConnection';
   items?: Array<{
-    __typename: "Post";
+    __typename: 'Post';
     id: string;
     title: string;
     numberOfComments?: number | null;
     comments?: {
-      __typename: "ModelCommentConnection";
+      __typename: 'ModelCommentConnection';
       nextToken?: string | null;
     } | null;
     createdAt: string;
@@ -399,7 +399,7 @@ export type ListPostsQuery = {
 };
 
 export type GetCommentQuery = {
-  __typename: "Comment";
+  __typename: 'Comment';
   id: string;
   postID: string;
   content: string;
@@ -408,9 +408,9 @@ export type GetCommentQuery = {
 };
 
 export type ListCommentsQuery = {
-  __typename: "ModelCommentConnection";
+  __typename: 'ModelCommentConnection';
   items?: Array<{
-    __typename: "Comment";
+    __typename: 'Comment';
     id: string;
     postID: string;
     content: string;
@@ -421,7 +421,7 @@ export type ListCommentsQuery = {
 };
 
 export type OnCreateTodoSubscription = {
-  __typename: "Todo";
+  __typename: 'Todo';
   id: string;
   name: string;
   description?: string | null;
@@ -430,7 +430,7 @@ export type OnCreateTodoSubscription = {
 };
 
 export type OnUpdateTodoSubscription = {
-  __typename: "Todo";
+  __typename: 'Todo';
   id: string;
   name: string;
   description?: string | null;
@@ -439,7 +439,7 @@ export type OnUpdateTodoSubscription = {
 };
 
 export type OnDeleteTodoSubscription = {
-  __typename: "Todo";
+  __typename: 'Todo';
   id: string;
   name: string;
   description?: string | null;
@@ -448,14 +448,14 @@ export type OnDeleteTodoSubscription = {
 };
 
 export type OnCreatePostSubscription = {
-  __typename: "Post";
+  __typename: 'Post';
   id: string;
   title: string;
   numberOfComments?: number | null;
   comments?: {
-    __typename: "ModelCommentConnection";
+    __typename: 'ModelCommentConnection';
     items?: Array<{
-      __typename: "Comment";
+      __typename: 'Comment';
       id: string;
       postID: string;
       content: string;
@@ -469,14 +469,14 @@ export type OnCreatePostSubscription = {
 };
 
 export type OnUpdatePostSubscription = {
-  __typename: "Post";
+  __typename: 'Post';
   id: string;
   title: string;
   numberOfComments?: number | null;
   comments?: {
-    __typename: "ModelCommentConnection";
+    __typename: 'ModelCommentConnection';
     items?: Array<{
-      __typename: "Comment";
+      __typename: 'Comment';
       id: string;
       postID: string;
       content: string;
@@ -490,14 +490,14 @@ export type OnUpdatePostSubscription = {
 };
 
 export type OnDeletePostSubscription = {
-  __typename: "Post";
+  __typename: 'Post';
   id: string;
   title: string;
   numberOfComments?: number | null;
   comments?: {
-    __typename: "ModelCommentConnection";
+    __typename: 'ModelCommentConnection';
     items?: Array<{
-      __typename: "Comment";
+      __typename: 'Comment';
       id: string;
       postID: string;
       content: string;
@@ -511,7 +511,7 @@ export type OnDeletePostSubscription = {
 };
 
 export type OnCreateCommentSubscription = {
-  __typename: "Comment";
+  __typename: 'Comment';
   id: string;
   postID: string;
   content: string;
@@ -520,7 +520,7 @@ export type OnCreateCommentSubscription = {
 };
 
 export type OnUpdateCommentSubscription = {
-  __typename: "Comment";
+  __typename: 'Comment';
   id: string;
   postID: string;
   content: string;
@@ -529,7 +529,7 @@ export type OnUpdateCommentSubscription = {
 };
 
 export type OnDeleteCommentSubscription = {
-  __typename: "Comment";
+  __typename: 'Comment';
   id: string;
   postID: string;
   content: string;
@@ -538,7 +538,7 @@ export type OnDeleteCommentSubscription = {
 };
 
 @Injectable({
-  providedIn: "root"
+  providedIn: 'root',
 })
 export class APIService {
   async CreateTodo(
@@ -556,7 +556,7 @@ export class APIService {
         }
       }`;
     const gqlAPIServiceArguments: any = {
-      input
+      input,
     };
     if (condition) {
       gqlAPIServiceArguments.condition = condition;
@@ -581,7 +581,7 @@ export class APIService {
         }
       }`;
     const gqlAPIServiceArguments: any = {
-      input
+      input,
     };
     if (condition) {
       gqlAPIServiceArguments.condition = condition;
@@ -606,7 +606,7 @@ export class APIService {
         }
       }`;
     const gqlAPIServiceArguments: any = {
-      input
+      input,
     };
     if (condition) {
       gqlAPIServiceArguments.condition = condition;
@@ -643,7 +643,7 @@ export class APIService {
         }
       }`;
     const gqlAPIServiceArguments: any = {
-      input
+      input,
     };
     if (condition) {
       gqlAPIServiceArguments.condition = condition;
@@ -680,7 +680,7 @@ export class APIService {
         }
       }`;
     const gqlAPIServiceArguments: any = {
-      input
+      input,
     };
     if (condition) {
       gqlAPIServiceArguments.condition = condition;
@@ -717,7 +717,7 @@ export class APIService {
         }
       }`;
     const gqlAPIServiceArguments: any = {
-      input
+      input,
     };
     if (condition) {
       gqlAPIServiceArguments.condition = condition;
@@ -742,7 +742,7 @@ export class APIService {
         }
       }`;
     const gqlAPIServiceArguments: any = {
-      input
+      input,
     };
     if (condition) {
       gqlAPIServiceArguments.condition = condition;
@@ -767,7 +767,7 @@ export class APIService {
         }
       }`;
     const gqlAPIServiceArguments: any = {
-      input
+      input,
     };
     if (condition) {
       gqlAPIServiceArguments.condition = condition;
@@ -792,7 +792,7 @@ export class APIService {
         }
       }`;
     const gqlAPIServiceArguments: any = {
-      input
+      input,
     };
     if (condition) {
       gqlAPIServiceArguments.condition = condition;
@@ -814,7 +814,7 @@ export class APIService {
         }
       }`;
     const gqlAPIServiceArguments: any = {
-      id
+      id,
     };
     const response = (await API.graphql(
       graphqlOperation(statement, gqlAPIServiceArguments)
@@ -879,7 +879,7 @@ export class APIService {
         }
       }`;
     const gqlAPIServiceArguments: any = {
-      id
+      id,
     };
     const response = (await API.graphql(
       graphqlOperation(statement, gqlAPIServiceArguments)
@@ -936,7 +936,7 @@ export class APIService {
         }
       }`;
     const gqlAPIServiceArguments: any = {
-      id
+      id,
     };
     const response = (await API.graphql(
       graphqlOperation(statement, gqlAPIServiceArguments)
@@ -1166,3 +1166,5 @@ export class APIService {
     )
   ) as Observable<SubscriptionResponse<OnDeleteCommentSubscription>>;
 }
+
+//Adding my on code

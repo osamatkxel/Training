@@ -1,0 +1,43 @@
+{
+  "Records": [
+    {
+      "eventID": "3a171435bc3417dc3314b8bb2cd76449",
+      "eventName": "INSERT",
+      "eventVersion": "1.1",
+      "eventSource": "aws:dynamodb",
+      "awsRegion": "us-east-1",
+      "dynamodb": {
+        "ApproximateCreationDateTime": 1622126839,
+        "Keys": {
+          "id": {
+            "S": "46"
+          }
+        },
+        "NewImage": {
+          "createdAt": {
+            "S": "2021-05-27T14:47:19.037Z"
+          },
+          "__typename": {
+            "S": "Comment"
+          },
+          "id": {
+            "S": "46"
+          },
+          "postID": {
+            "S": "20"
+          },
+          "content": {
+            "S": "bebebe"
+          },
+          "updatedAt": {
+            "S": "2021-05-27T14:47:19.037Z"
+          }
+        },
+        "SequenceNumber": "5588400000000011061450020",
+        "SizeBytes": 111,
+        "StreamViewType": "NEW_AND_OLD_IMAGES"
+      },
+      "eventSourceARN": "arn:aws:dynamodb:us-east-1:790101844276:table/Comment-nz2shmg5cjc2xdxcb6fos4qqt4-dev/stream/2021-05-26T07:02:29.790"
+    }
+  ]
+}
